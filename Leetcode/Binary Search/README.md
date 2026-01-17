@@ -144,6 +144,8 @@ int lastOccur(const vector<int>& arr, int target) {
 ---
 
 #### Insertion Index
+
+
 ```cpp
 int insertionIndex(const vector<int>& arr, int target) {
     int l = 0, r = arr.size();
@@ -159,6 +161,7 @@ int insertionIndex(const vector<int>& arr, int target) {
     return l;
 }
 ```
+> **Note:** Insertion index similar to the first occurence but different is that insertion index is return the first place could be insert instead of find the first match element. So basically, there body is same to each other but differnet at the end. The first occurance need to check the l is less than input array size and left index of arr is match to target, but Insertion Index just return left index.
 ---
 
 #### Count Duplicates -> (Upper - Lower)
