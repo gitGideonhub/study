@@ -19,7 +19,7 @@ I am actively solving problems on LeetCode to sharpen my problem-solving skills.
 * **LeetCode Profile:** [This is my leetcode link](https://leetcode.com/u/Lucascode/)
 * **Areas:**
 - Two Pointers
-- Sorting and Search
+- Sorting and Search -> I will skip other sorting algo just review binary search only
 - Sliding Window
 - Monotonic Stack
 - Linked List
