@@ -139,7 +139,7 @@ int lastOccur(const vector<int>& arr, int target) {
     return -1;
 }
 ```
-> **Note:** Differences between normal binary search<br> 1. right starting from arr.size() -> r = arr.size();<br> 2. while(l < r)<br> 3. left shirnk is r = mid instead of r = mid - 1;<br> 4. condition at the end of function
+> **Note:** Differences between normal binary search<br> 1. right starting from arr.size() -> r = arr.size();<br> 2. while(l < r)<br> 3. left shirnk is r = mid instead of r = mid - 1;<br> 4. condition at the end of function<br> 5. shrink condition is if (nums[mid] <= target)
 
 ---
 
