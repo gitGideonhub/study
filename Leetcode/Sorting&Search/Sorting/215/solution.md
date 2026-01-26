@@ -81,3 +81,33 @@ public:
     }
 };
 ```
+
+
+counting sort
+```cpp
+class Solution {
+public:
+    int findKthLargest(vector<int>& nums, int k) {
+        int maxVal = *max_element(nums.begin(), nums.end());
+        int minVal = *min_element(nums.begin(), nums.end());
+
+        vector<int> count(maxVal - minVal + 1, 0);
+
+        for (int num:nums) {
+            count[num-minVal]++;
+        }
+
+        for (int i = count.size() - 1; i >= 0; i--) {
+            if (count[i] > 0) {
+                k-=count[i];
+            }
+
+            if (k <= 0) {
+                return i+minVal;
+            }
+        }
+
+        return -1;
+    }
+};
+```
