@@ -1,0 +1,33 @@
+
+
+
+
+
+## Solution
+Bucket Sort<br>
+Time Complexity: ```O(n)```, normally, bucket sort's worst case is ```O(n^2)```, but in this case, we only has three different digits.<br>
+Space Complexity: ```O(n + k)```, ```k``` is 3. so, the space complexity is ```O(n)```.
+
+```cpp
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        vector<int> res(nums.size());
+        vector<int> count(3, 0);
+        for (int num:nums) {
+            count[num]++;
+        }
+        int idx = 0;
+        for (int i = 0; i < res.size(); i++) {
+            if (count[idx] > 0) {
+                nums[i] = idx;
+                count[idx]--;
+            } else {
+                idx++;
+                i--;
+            }
+        }
+
+    }
+};
+```
